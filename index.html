@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ZEO Aliance</title>
+	<link rel="icon" href="favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="libraries/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="libraries/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+	<!--HEAD-->
+	<header>
+		<div id="head">
+			<div class="content">
+				<a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a> <span class="head-text"><span class="rounded-rectangle">3</span> easy steps to clean your mac!</span> 
+	   		 <div class="central">
+				<div class="triangle">
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</div>
+			</div>
+		    </div>
+		</div>
+	</header>
+	<!--/HEAD-->
+	<!--MAIN INFORMATION-->
+	<nav id="navigation">
+		<div class="steps content">
+			<ul id="steps-list">
+				<li><img src="images/icon-download.png" alt="" class="steps-icons">
+					<p class="steps-text"><span class="bold-text step">STEP 1: </span> <span> Click </span> <span><a href="#">"Download now"</a></span></p>
+				</li>
+				<li><img src="images/icon.png" alt="" class="steps-icons">
+					<p class="steps-text"><span class="bold-text step">STEP 2: </span> <span>Click </span> <span class="bold-text">"Run"</span> or <span class="bold-text">"Save"</span></p>
+				</li>
+				<li><img src="images/icon-clock.png" alt="" class="steps-icons">
+					<p class="steps-text"><span class="bold-text step">STEP 3: </span> <span>Scan your Mac</span></p>
+				</li>
+				<div class="download"> <a class="btn" href="#"><span class="text">Download now</span><span class="arrow"><img src="images/simple_arrow.png"></span></a> </div>
+			</ul>
+			<a href="#">
+				<p class="click-here">or Click here to download</p>
+			</a> <img class="mac-gif" src="images/cleaner_picture.png" alt="mac-screen">
+			<figure class="number-of-downloads"> <img src="images/downloads-this-week.png" alt="downloads this week"> <img src="images/shopper_approved.png" alt="shopper approved"> </figure>
+		</div>
+	</nav>
+	<!--/MAIN IFORMATION-->
+	<!--Media-->
+	<div id="media">
+		<div class="content">
+			<ul class="media-list">
+				<a href="http://edition.cnn.com/" target="_blank" class="decoration-none">
+					<li class="media-number1"></li>
+				</a>
+				<a href="#" class="decoration-none">
+					<li class="media-number2"></li>
+				</a>
+				<a href="#" class="decoration-none">
+					<li class="media-number3"></li>
+				</a>
+				<a href="#" class="decoration-none">
+					<li class="media-number4"></li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<!--/MEDIA-->
+	<!-- REPAIR TOOLS -->
+	<div class="repair-tools">
+		<div class="tools-block">
+			<p class="presentation"> What we have to keep your Mac <span>clean and safe</span> </p>
+			<div class="tools-variety" ng-controller="toolsCtrl">
+				<!-- tool description -->
+				<div class="description">
+					<div class="choice">
+						<div style="background-position:{{bg}}; width:{{wid}}"></div>
+						<p><b>{{feach}}</b></p>
+					</div>
+					<div class="information">
+						<p>{{fInf}}</p> <a class="downloader" href="#">Download Now</a> </div>
+				</div>
+				<div class="list">
+					<!-- multiple angular icons -->
+					<div ng-click="counter($index)" class="hexagon inner" ng-class="{outline: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-repeat="icon in icons track by $index">
+						<div class="sticker" style="width:{{icon.widths}}; background-position: {{icon.background_position}}; margin-left:{{icon.marg}}; "></div>
+						<div class="face1" ng-class="{outline: hover}"></div>
+						<div class="face2" ng-class="{outline: hover}"></div>
+					</div>
+					<!-- multiple angular icons -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /REPAIR TOOLS -->
+	<!-- REVIEWS SECTION -->
+	<div class="reviews-section">
+		<p>Checkout Some Reviews from our Users</p>
+		<div class="reviews">
+			<div class="rev">
+				<div class="cont">
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<p class="text">“I just renewed my subscription with Mc. Keeper.</p>
+					<p>I like it, I feel my computer is well protected“</p>
+				</div>
+				<div class="client"> <span class="client-name">Michael T </span>
+					<p class="city">Oxfordshire, United Kingdom, 12 May 2016</p>
+				</div>
+			</div>
+			<div class="rev">
+				<div class="cont">
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<p class="text">“Easy to order. I had to purchase a few add-ons above and beyond what I expected, but overall, I'm very satis- fiedwith everithing."</p>
+				</div>
+				<div class="client"> <span class="client-name">Michael T </span>
+					<p class="city">Oxfordshire, United Kingdom, 12 May 2016</p>
+				</div>
+			</div>
+			<div class="rev">
+				<div class="cont">
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<div id="stars"></div>
+					<p class="text">“I have used Mackeeper before and I liked it and decided to come back to it."</p>
+				</div>
+				<div class="client"> <span class="client-name">Michael T </span>
+					<p class="city">Oxfordshire, United Kingdom, 12 May 2016</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- REVIEWS SECTION -->
+	<!-- DOWNLOAD, RATING AND STATS SECTION -->
+	<div class="preend">
+		<div class="fitted"> <img class="system" src="images/system.png">
+			<div class="placer">
+				<div class="download"> <a class="btn" href="#"><span class="text">Download now</span><span class="arrow"><img src="images/simple_arrow.png"></span></a> </div> <a class="clicker" href="#">or Click here to download</a> </div> <img class="map" src="images/map.png"> </div>
+	</div>
+	<!-- /PREEND SECTION -->
+	<!-- FOOTER -->
+	<footer>
+		<div class="footer1">
+			<div class="mid">
+				<ul>
+					<li><a href="#">App</a></li>
+					<li><a href="#">Privacy policy</a></li>
+					<li><a href="#">Company</a></li>
+					<li><a href="#">EULA</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Uinstall</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>*According to our internal statistic</p>
+			<p>**This statement is solely our subjective opinion and is used purely for advertising and promotion purposes.</p>
+			<p>You nay be presented with an optional offer(s) during installation <a href="#">learn more &gt</a></p>
+			<p>Copyright © 2016 Kromtech Alliance Corp. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+
+</html>
